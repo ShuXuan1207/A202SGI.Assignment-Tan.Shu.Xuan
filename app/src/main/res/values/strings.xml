@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Global News Storm</string>
+    <string name="home_fragment">Home</string>
+    <string name="history_fragment">History</string>
+    <string name="api_fragment">List of API</string>
+
+    <string name="title_text">Title</string>
+    <string name="description">Description</string>
+    <string name="dateTime"><![CDATA[Date & Time]]></string>
+    <string name="refresh">Refresh</string>
+    <string name="clear">Clear</string>
+    <string name="proceed">Proceed</string>
+
+    <color name="white">#FFFFFF</color>
+</resources>
