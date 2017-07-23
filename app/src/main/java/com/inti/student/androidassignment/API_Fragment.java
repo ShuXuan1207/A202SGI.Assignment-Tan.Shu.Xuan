@@ -126,6 +126,14 @@ public class API_Fragment extends Fragment {
         proceedButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View view) {
+                if (apiLinkchosen == null)
+                    apiLinkchosen = apiKey[0]; //Retrieves the API Key of the clicked the list item
+
+                homeFragment = new HomeFragment();//Get Fragment Instance
+                Bundle data = new Bundle();//Use bundle to pass data
+                data.putString("apiKeychosen", apiLinkchosen);//assigns the retrieved API Key into a bundle with a key value
+                homeFragment.setArguments(data);//sends the bundle with the API Key to HomeFragment class
+
                 getFragmentManager().beginTransaction().replace(R.id.container, homeFragment).commit(); //calls HomeFragment class
             }
         });

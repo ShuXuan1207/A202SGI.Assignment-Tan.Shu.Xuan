@@ -5,10 +5,10 @@ import java.util.List;
 
 public class NewsObject {
 
-    private String status;
-    private String source;
-    private String sortBy;
-    private List<Article> articles;
+    public String status;
+    public String source;
+    public String sortBy;
+    public List<Article> articles;
 
 
     public NewsObject(String status, String source, String sortBy, List<Article> articles) {

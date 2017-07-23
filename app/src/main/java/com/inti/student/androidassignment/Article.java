@@ -2,12 +2,12 @@ package com.inti.student.androidassignment;
 
 public class Article {
 
-    private String author;
-    private String urlToImage;
-    private String title;
-    private String description;
-    private String publishedAt;
-    private String url;
+    public String author;
+    public String urlToImage;
+    public String title;
+    public String description;
+    public String publishedAt;
+    public String url;
 
     public Article(String author, String urlToImage, String title, String description, String publishedAt, String url) {
         this.author = author;
