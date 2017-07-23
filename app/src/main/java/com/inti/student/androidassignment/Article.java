@@ -1,9 +1,5 @@
 package com.inti.student.androidassignment;
 
-/**
- * Created by User on 6/6/2017.
- */
-
 public class Article {
 
     public String author;
