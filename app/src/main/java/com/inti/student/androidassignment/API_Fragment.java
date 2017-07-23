@@ -89,10 +89,10 @@ public class API_Fragment extends Fragment {
 
 
         //***ONLY to be used ONCE to insert into database***
-    /*
-        for(int i = 0; i < 20; i++)
-            mAPI_databaseHelper.addData(websiteName[i], apiKey[i]);
-    */
+
+        //for(int i = 0; i < 20; i++)
+            //mAPI_databaseHelper.addData(websiteName[i], apiKey[i]);
+
         //For Loop inserts the Strings containing Website Names and API Keys into an SQLite Database
 
 
