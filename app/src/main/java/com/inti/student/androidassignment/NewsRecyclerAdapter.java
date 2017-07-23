@@ -74,20 +74,19 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsViewHolder> {
     @Override
     public NewsViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = inflater.inflate(R.layout.item, parent, false);
-
         return new NewsViewHolder(view);
     }
 
+
+
     @Override
     public void onBindViewHolder(NewsViewHolder holder, int position) {
-
 
         new DownloadImageTask(holder.imageUrl).execute(newsObject.getArticles().get(position).getUrlToImage());
         holder.title.setText(newsObject.getArticles().get(position).getTitle());
         holder.description.setText(newsObject.getArticles().get(position).getDescription());
         holder.dateTime.setText(newsObject.getArticles().get(position).getPublishedAt());
         holder.url.setText(newsObject.getArticles().get(position).getUrl());
-
 
 
         final String author = newsObject.getArticles().get(position).getAuthor();
@@ -105,7 +104,6 @@ public class NewsRecyclerAdapter extends RecyclerView.Adapter<NewsViewHolder> {
                 if(!isLongClick) {
                     mHistoryDatabaseHelper = new HistoryDatabaseHelper(context);
                     mHistoryDatabaseHelper.addData(author, imageUrl, title, description, dateTime, url);
-
                     String s = newsObject.getArticles().get(position).getUrl();
                     Intent intent = new Intent(context, InAppBrowserActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

@@ -10,10 +10,6 @@ import java.net.URL;
 public class HTTPDataHandler {
     static String stream = null;
 
-    public HTTPDataHandler() {
-        //Default constructor
-    }
-
     public String getHTTPData(String urlString) {
         try {
             URL url = new URL(urlString);  //Assigns the paramater as URL

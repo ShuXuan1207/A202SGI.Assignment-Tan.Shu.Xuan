@@ -51,7 +51,8 @@ public class HomeFragment extends Fragment {
     protected void loadApp(String apiKey) {
         AsyncTask<String, String, String> loadApp = new AsyncTask<String, String, String>() {
 
-            ProgressDialog dialog = new ProgressDialog(getActivity()); //A pop-up message dialog
+            //A pop-up message dialog
+            ProgressDialog dialog = new ProgressDialog(getActivity());
 
             @Override
             protected void onPreExecute() {
@@ -59,18 +60,20 @@ public class HomeFragment extends Fragment {
                 dialog.show();
             }
 
-            @Override
-            protected String doInBackground(String... params) { //Retrieves all the data information from the API Key url
+
+            @Override //Retrieves all the data information from the API Key url
+            protected String doInBackground(String... params) {
                 String result;
                 HTTPDataHandler http = new HTTPDataHandler();
                 result = http.getHTTPData(params[0]);
                 return result;
             }
 
+            //Gets the JSON information and converts it into Java Object
             @Override
             protected void onPostExecute(String s) {
                 dialog.dismiss();
-                newsObject = new Gson().fromJson(s, NewsObject.class); //Gets the JSON information and converts it into Java Object
+                newsObject = new Gson().fromJson(s, NewsObject.class);
                 NewsRecyclerAdapter newsRecyclerAdapter = new NewsRecyclerAdapter(newsObject, getActivity().getBaseContext());
                 recyclerView.setAdapter(newsRecyclerAdapter);
             }

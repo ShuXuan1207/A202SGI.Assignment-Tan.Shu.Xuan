@@ -47,7 +47,6 @@ public class API_DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(COL2, websiteName);
         contentValues.put(COL3, url);
 
-
         long result = db.insert(TABLE_API, null, contentValues);
 
         //if date as inserted incorrectly it will return -1
@@ -62,7 +61,6 @@ public class API_DatabaseHelper extends SQLiteOpenHelper {
     public Cursor getAPI() {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_API, null);
-
         return cursor;
     }
 

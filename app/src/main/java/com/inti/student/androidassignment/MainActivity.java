@@ -16,13 +16,14 @@ public class MainActivity extends AppCompatActivity {
             switch (item.getItemId()) {
 
                 case R.id.navigation_home:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.container, new API_Fragment()).commit(); //Calls a new API_Fragment class
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, new API_Fragment()).commit();
+                    //Calls a new API_Fragment class
                     return true;
                 case R.id.navigation_history:
-                    getSupportFragmentManager().beginTransaction().replace(R.id.container, new HistoryFragment()).commit(); //Calls a new History_Fragment class
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, new HistoryFragment()).commit();
+                    //Calls a new History_Fragment class
                     return true;
             }
-
             return false;
         }
     };
@@ -32,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //Starts the app by calling API_Fragment.class
         getSupportFragmentManager().beginTransaction().replace(R.id.container, new API_Fragment()).commit();
 
+        //Activates the bottom navigation bar on every fragment
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.bottom_navigation_bar);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }

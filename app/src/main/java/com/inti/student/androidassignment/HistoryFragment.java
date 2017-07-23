@@ -32,8 +32,13 @@ public class HistoryFragment extends Fragment {
 
         Cursor cursor = mHistoryDatabaseHelper.getHistory();
 
-        while(cursor.moveToNext())
-            histoList.add(new Article(cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4), cursor.getString(5), cursor.getString(6)));
+        while(cursor.moveToNext()) //adds the information from HistoryDatabase to a List
+            histoList.add(new Article(cursor.getString(1),
+                    cursor.getString(2),
+                    cursor.getString(3),
+                    cursor.getString(4),
+                    cursor.getString(5),
+                    cursor.getString(6)));
 
 
         newsAdapter = new NewsListAdapter(getActivity(), histoList);
@@ -47,9 +52,14 @@ public class HistoryFragment extends Fragment {
                 TextView url = (TextView) view.findViewById(R.id.url);
                 String s = url.getText().toString(); //Retrieves the URL of the clicked the list item
 
-                Intent intent = new Intent(getActivity(), InAppBrowserActivity.class); //Gets Activity Intent
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); //Makes sure the activity task does not start if there is one already running
-                intent.putExtra("url", s); //assigns the URL with a key value
+                //Gets Activity Intent
+                Intent intent = new Intent(getActivity(), InAppBrowserActivity.class);
+
+                //Makes sure the activity task does not start if there is one already running
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+                //assigns the URL with a key value
+                intent.putExtra("url", s);
                 getActivity().startActivity(intent);//initiates the command to start the Activity
             }
         });

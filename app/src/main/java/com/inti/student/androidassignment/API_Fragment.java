@@ -96,9 +96,8 @@ public class API_Fragment extends Fragment {
         //For Loop inserts the Strings containing Website Names and API Keys into an SQLite Database
 
 
-        cursor = mAPI_databaseHelper.getAPI();
         //Retrieves the entire table from SQLite Database containing Website Names and API Keys
-
+        cursor = mAPI_databaseHelper.getAPI();
 
         while(cursor.moveToNext()) //Inserts the information retrieved from SQLite Database to a List
             apiList.add(new API(cursor.getString(1), cursor.getString(2)));

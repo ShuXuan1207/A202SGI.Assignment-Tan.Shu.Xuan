@@ -64,7 +64,6 @@ public class HistoryDatabaseHelper extends SQLiteOpenHelper {
         if (result == -1) {
             return false;
         } else {
-            System.out.print("Saved");
             return true;
         }
     }

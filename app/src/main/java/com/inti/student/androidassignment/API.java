@@ -4,8 +4,8 @@ package com.inti.student.androidassignment;
 
 public class API {
 
-    public String websiteName;
-    public String url;
+    private String websiteName;
+    private String url;
 
     public API(String websiteName, String url) {
         this.websiteName = websiteName;
@@ -15,7 +15,6 @@ public class API {
     public String getWebsiteName() {
         return websiteName;
     }
-
     public void setWebsiteName(String websiteName) {
         this.websiteName = websiteName;
     }
@@ -23,7 +22,6 @@ public class API {
     public String getUrl() {
         return url;
     }
-
     public void setUrl(String url) {
         this.url = url;
     }
