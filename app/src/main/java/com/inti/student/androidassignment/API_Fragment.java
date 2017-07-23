@@ -39,11 +39,11 @@ public class API_Fragment extends Fragment {
             "ESPN", //7
             "Financial Times", //8
             "Fox Sports", //9
-            "Hacker News", //10
-            "IGN", //11
-            "MTV News", //12
-            "National Geographic", //13
-            "New York Magazine", //14
+            "Google News", //10
+            "Hacker News", //11
+            "IGN", //12
+            "MTV News", //13
+            "National Geographic", //14
             "Reddit /r/all", //15
             "Spiegel Online", //16
             "The Wall Street Journal", //17
@@ -62,11 +62,11 @@ public class API_Fragment extends Fragment {
             "https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //7
             "https://newsapi.org/v1/articles?source=financial-times&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //8
             "https://newsapi.org/v1/articles?source=fox-sports&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //9
-            "https://newsapi.org/v1/articles?source=hacker-news&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //10
-            "https://newsapi.org/v1/articles?source=ign&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //11
-            "https://newsapi.org/v1/articles?source=mtv-news&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //12
-            "https://newsapi.org/v1/articles?source=national-geographic&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //13
-            "https://newsapi.org/v1/articles?source=new-york-magazine&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //14
+            "https://newsapi.org/v1/articles?source=google-news&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //10
+            "https://newsapi.org/v1/articles?source=hacker-news&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //11
+            "https://newsapi.org/v1/articles?source=ign&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //12
+            "https://newsapi.org/v1/articles?source=mtv-news&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //13
+            "https://newsapi.org/v1/articles?source=national-geographic&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //14
             "https://newsapi.org/v1/articles?source=reddit-r-all&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //15
             "https://newsapi.org/v1/articles?source=spiegel-online&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //16
             "https://newsapi.org/v1/articles?source=the-wall-street-journal&sortBy=top&apiKey=c3aa663499d746d796ea79cd865de1f8", //17
@@ -89,10 +89,10 @@ public class API_Fragment extends Fragment {
 
 
         //***ONLY to be used ONCE to insert into database***
-
+    /*
         for(int i = 0; i < 20; i++)
             mAPI_databaseHelper.addData(websiteName[i], apiKey[i]);
-
+    */
         //For Loop inserts the Strings containing Website Names and API Keys into an SQLite Database
 
 
