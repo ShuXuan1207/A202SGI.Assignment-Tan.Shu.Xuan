@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id = "@+id/list_container"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content" >
 
     <android.support.v7.widget.CardView
         android:id="@+id/card_container"
@@ -39,21 +39,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/imageUrl"
-                android:text="@string/title_text"/>
+                android:text="@string/title_text"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/dateTime"
-                android:text="@string/description"/>
+                android:text="@string/description"
+                android:textSize="20sp"/>
 
             <TextView
                 android:id="@+id/dateTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/title"
-                android:text="@string/dateTime"/>
+                android:text="@string/dateTime"
+                android:textSize="20sp"/>
 
 
             <TextView
